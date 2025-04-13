@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
+import L from 'leaflet';
 import './App.css';
+import PoolMap from './components/PoolMap';
+
+import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
+import markerIcon from 'leaflet/dist/images/marker-icon.png';
+import markerShadow from 'leaflet/dist/images/marker-shadow.png';
+
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: markerIcon2x,
+  iconUrl: markerIcon,
+  shadowUrl: markerShadow,
+});
 
 function App() {
+  const [poolBars, setPoolBars] = useState([]);
+
+  useEffect(() => {
+    fetch('/data/poolBars.json')
+      .then((res) => res.json())
+      .then((data) => setPoolBars(data))
+      .catch((err) => console.error('Error loading poolBars.json:', err));
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hoboken Pool Tables</h1>
+      <PoolMap poolBars={poolBars} />
     </div>
   );
 }
