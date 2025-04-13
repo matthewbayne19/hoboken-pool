@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/matthewbayne19/hoboken-pool/static/css/main.7d72cf6d.css",
-    "main.js": "/matthewbayne19/hoboken-pool/static/js/main.bddc53cc.js",
-    "static/js/453.252bbb0c.chunk.js": "/matthewbayne19/hoboken-pool/static/js/453.252bbb0c.chunk.js",
-    "index.html": "/matthewbayne19/hoboken-pool/index.html",
-    "main.7d72cf6d.css.map": "/matthewbayne19/hoboken-pool/static/css/main.7d72cf6d.css.map",
-    "main.bddc53cc.js.map": "/matthewbayne19/hoboken-pool/static/js/main.bddc53cc.js.map",
-    "453.252bbb0c.chunk.js.map": "/matthewbayne19/hoboken-pool/static/js/453.252bbb0c.chunk.js.map"
+    "main.css": "/hoboken-pool/static/css/main.7d72cf6d.css",
+    "main.js": "/hoboken-pool/static/js/main.2f0a2d6d.js",
+    "static/js/453.252bbb0c.chunk.js": "/hoboken-pool/static/js/453.252bbb0c.chunk.js",
+    "index.html": "/hoboken-pool/index.html",
+    "main.7d72cf6d.css.map": "/hoboken-pool/static/css/main.7d72cf6d.css.map",
+    "main.2f0a2d6d.js.map": "/hoboken-pool/static/js/main.2f0a2d6d.js.map",
+    "453.252bbb0c.chunk.js.map": "/hoboken-pool/static/js/453.252bbb0c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7d72cf6d.css",
-    "static/js/main.bddc53cc.js"
+    "static/js/main.2f0a2d6d.js"
   ]
 }
