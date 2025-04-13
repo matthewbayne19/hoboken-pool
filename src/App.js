@@ -18,7 +18,7 @@ function App() {
   const [poolBars, setPoolBars] = useState([]);
 
   useEffect(() => {
-    fetch(process.env.PUBLIC_URL + '/data/poolbars.json')
+    fetch(process.env.PUBLIC_URL + '/data/poolBars.json')
       .then((res) => res.json())
       .then((data) => setPoolBars(data))
       .catch((err) => console.error('Error loading poolBars.json:', err));
