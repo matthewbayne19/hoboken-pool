@@ -14,9 +14,9 @@ const LegendOverlay = () => {
       fontSize: '14px',
       textAlign: 'left'
     }}>
-      <div><span style={{ color: 'red', fontWeight: 'bold' }}>●</span> League Night (Today)</div>
-      <div><span style={{ color: 'green', fontWeight: 'bold' }}>●</span> Has League (Not Today)</div>
-      <div><span style={{ color: 'blue', fontWeight: 'bold' }}>●</span> No League</div>
+      <div><span style={{ color: 'red', fontWeight: 'bold' }}>●</span> League Tonight</div>
+      <div><span style={{ color: 'green', fontWeight: 'bold' }}>●</span> No League Tonight</div>
+      <div><span style={{ color: 'blue', fontWeight: 'bold' }}>●</span> No League Ever</div>
     </div>
   );
 };
