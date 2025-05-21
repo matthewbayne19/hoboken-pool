@@ -32,7 +32,7 @@ const PoolMap = ({ poolBars }) => {
   return (
     <div style={{ position: 'relative' }}>
       <LegendOverlay />
-      <MapContainer center={[40.744, -74.032]} zoom={15} style={{ height: '80vh', width: '100%' }}>
+      <MapContainer center={[40.744, -74.032]} zoom={15} style={{ height: '100vh', width: '100%' }}>
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution="&copy; OpenStreetMap contributors"
