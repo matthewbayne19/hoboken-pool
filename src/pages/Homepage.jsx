@@ -15,7 +15,7 @@ const Homepage = () => {
     cursor: 'pointer',
     marginTop: '1rem',
     width: '100%',
-    width: '300px',
+    maxWidth: '300px',
     textAlign: 'center'
   };
 
