@@ -11,7 +11,7 @@ const Header = () => {
       fontSize: '1.5rem',
       boxShadow: '0 2px 4px rgba(0,0,0,0.3)'
     }}>
-      🎱 Hoboken Pool Tables Map
+      🎱 Hoboken Pool
     </header>
   );
 };
