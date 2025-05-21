@@ -10,6 +10,8 @@ const BarPopup = ({ bar }) => {
       <h3>{bar.name}</h3>
       <p><strong>Address:</strong><br />{bar.address}</p>
       <p><strong>League Nights:</strong> {leagueDays}</p>
+      <p><strong>Table Rating:</strong> {bar.rating || 'Not rated'}</p>
+      <p><strong>Number of Tables:</strong> {bar.tables}</p>
     </div>
   );
 };

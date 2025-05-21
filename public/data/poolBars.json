@@ -1,66 +1,83 @@
 [
-    {
-      "name": "Mulligan's Pub",
-      "lat": 40.7375,
-      "lng": -74.0318,
-      "address": "159 1st St, Hoboken, NJ 07030",
-      "league": ["Monday", "Wednesday"]
-    },
-    {
-      "name": "McSwiggan's Pub",
-      "lat": 40.7372,
-      "lng": -74.0309,
-      "address": "110 1st St, Hoboken, NJ 07030",
-      "league": []
-    },
-    {
-      "name": "The Shannon",
-      "lat": 40.7413,
-      "lng": -74.0310,
-      "address": "106 1st St, Hoboken, NJ 07030",
-      "league": ["Monday", "Wednesday"]
-    },
-    {
-      "name": "The Ferryman on 1st",
-      "lat": 40.7379,
-      "lng": -74.0305,
-      "address": "94 Bloomfield St, Hoboken, NJ 07030",
-      "league": ["Monday", "Wednesday"]
-    },
-    {
-      "name": "River Street Garage",
-      "lat": 40.7362,
-      "lng": -74.0303,
-      "address": "80 River St, Hoboken, NJ 07030",
-      "league": []
-    },
-    {
-      "name": "Louise & Jerry's Tavern",
-      "lat": 40.7388,
-      "lng": -74.0303,
-      "address": "329 Washington St, Hoboken, NJ 07030",
-      "league": ["Sunday"]
-    },
-    {
-      "name": "The Ale House",
-      "lat": 40.742,
-      "lng": -74.0321,
-      "address": "1034 Willow Ave, Hoboken, NJ 07030",
-      "league": ["Monday", "Wednesday"]
-    },
-    {
-      "name": "Willie McBride's",
-      "lat": 40.7472,
-      "lng": -74.0323,
-      "address": "616 Grand St, Hoboken, NJ 07030",
-      "league": ["HIVE TODO"]
-    },
-    {
-      "name": "Madd Hatter",
-      "lat": 40.7371,
-      "lng": -74.0300,
-      "address": "221 Washington St, Hoboken, NJ 07030",
-      "league": []
-    }
-  ]
-  
+  {
+    "name": "Mulligan's Pub",
+    "lat": 40.73776,
+    "lng": -74.03229,
+    "address": "159 1st St, Hoboken, NJ 07030",
+    "league": ["Monday", "Wednesday"],
+    "rating": "8.5",
+    "tables": 1
+  },
+  {
+    "name": "McSwiggan's Pub",
+    "lat": 40.73781,
+    "lng": -74.03160,
+    "address": "110 1st St, Hoboken, NJ 07030",
+    "league": [],
+    "rating": "8.7",
+    "tables": 1
+  },
+  {
+    "name": "The Shannon",
+    "lat": 40.73768,
+    "lng": -74.03137,
+    "address": "106 1st St, Hoboken, NJ 07030",
+    "league": ["Monday", "Wednesday"],
+    "rating": "9.1",
+    "tables": 2
+  },
+  {
+    "name": "The Ferryman on 1st",
+    "lat": 40.73753,
+    "lng": -74.03193,
+    "address": "94 Bloomfield St, Hoboken, NJ 07030",
+    "league": ["Monday", "Wednesday"],
+    "rating": "6.9",
+    "tables": 1
+  },
+  {
+    "name": "River Street Garage",
+    "lat": 40.73632,
+    "lng": -74.02931,
+    "address": "80 River St, Hoboken, NJ 07030",
+    "league": [],
+    "rating": "7.3",
+    "tables": 1
+  },
+  {
+    "name": "Louise & Jerry's Tavern",
+    "lat": 40.74106,
+    "lng": -74.02964,
+    "address": "329 Washington St, Hoboken, NJ 07030",
+    "league": ["Sunday"],
+    "rating": "7.9",
+    "tables": 1
+  },
+  {
+    "name": "The Ale House",
+    "lat": 40.75030,
+    "lng": -74.0321,
+    "address": "1034 Willow Ave, Hoboken, NJ 07030",
+    "league": ["Monday", "Wednesday"],
+    "rating": "8.2",
+    "tables": 1
+  },
+  {
+    "name": "Willie McBride's",
+    "lat": 40.74521,
+    "lng": -74.03441,
+    "address": "616 Grand St, Hoboken, NJ 07030",
+    "league": ["HIVE ATHLETICS CONFLICT"],
+    "rating": "4.1",
+    "tables": 1
+  },
+  {
+    "name": "Madd Hatter",
+    "lat": 40.73949,
+    "lng": -74.03010,
+    "address": "221 Washington St, Hoboken, NJ 07030",
+    "league": [],
+    "rating": "6.2",
+    "tables": 1
+  }
+]
