@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import L from 'leaflet';
 import './App.css';
-import PoolMap from './components/PoolMap';
 import Header from './components/Header';
+import PoolMap from './components/PoolMap';
+import Homepage from './pages/Homepage'; 
+import TournamentsPage from './pages/TournamentsPage'
 
 import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
 import markerIcon from 'leaflet/dist/images/marker-icon.png';
@@ -26,10 +29,14 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <Router>
       <Header />
-      <PoolMap poolBars={poolBars} />
-    </div>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/map" element={<PoolMap poolBars={poolBars} />} />
+        <Route path="/tournaments" element={<TournamentsPage />} />
+      </Routes>
+    </Router>
   );
 }
 
