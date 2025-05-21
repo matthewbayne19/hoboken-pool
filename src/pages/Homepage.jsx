@@ -35,6 +35,10 @@ const Homepage = () => {
         View Map
       </button>
 
+      <button onClick={() => navigate('/bars')} style={buttonStyle}>
+        View Bar List
+      </button>
+
       <button onClick={() => navigate('/tournaments')} style={buttonStyle}>
         View Tournaments
       </button>

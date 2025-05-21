@@ -6,6 +6,7 @@ import Header from './components/Header';
 import PoolMap from './components/PoolMap';
 import Homepage from './pages/Homepage'; 
 import TournamentsPage from './pages/TournamentsPage'
+import BarsListPage from './pages/BarsListPage';
 
 import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
 import markerIcon from 'leaflet/dist/images/marker-icon.png';
@@ -35,6 +36,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/map" element={<PoolMap poolBars={poolBars} />} />
         <Route path="/tournaments" element={<TournamentsPage />} />
+        <Route path="/bars" element={<BarsListPage />} />
       </Routes>
     </Router>
   );
