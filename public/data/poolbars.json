@@ -6,7 +6,9 @@
     "address": "159 1st St, Hoboken, NJ 07030",
     "league": ["Monday", "Wednesday"],
     "rating": "8.5",
-    "tables": 1
+    "tables": 1,
+    "pricePerGame": "$1.00",
+    "cashOnly": true
   },
   {
     "name": "McSwiggan's Pub",
@@ -15,7 +17,9 @@
     "address": "110 1st St, Hoboken, NJ 07030",
     "league": [],
     "rating": "8.7",
-    "tables": 1
+    "tables": 1,
+    "pricePerGame": "$1.00",
+    "cashOnly": true
   },
   {
     "name": "The Shannon",
@@ -24,7 +28,9 @@
     "address": "106 1st St, Hoboken, NJ 07030",
     "league": ["Monday", "Wednesday"],
     "rating": "9.1",
-    "tables": 2
+    "tables": 2,
+    "pricePerGame": "$2.00",
+    "cashOnly": true
   },
   {
     "name": "The Ferryman on 1st",
@@ -33,7 +39,9 @@
     "address": "94 Bloomfield St, Hoboken, NJ 07030",
     "league": ["Monday", "Wednesday"],
     "rating": "6.9",
-    "tables": 1
+    "tables": 1,
+    "pricePerGame": "$2.00",
+    "cashOnly": false
   },
   {
     "name": "River Street Garage",
@@ -42,7 +50,9 @@
     "address": "80 River St, Hoboken, NJ 07030",
     "league": [],
     "rating": "7.3",
-    "tables": 1
+    "tables": 1,
+    "pricePerGame": "$2.00",
+    "cashOnly": true
   },
   {
     "name": "Louise & Jerry's Tavern",
@@ -51,7 +61,9 @@
     "address": "329 Washington St, Hoboken, NJ 07030",
     "league": ["Sunday"],
     "rating": "7.9",
-    "tables": 1
+    "tables": 1,
+    "pricePerGame": "$2.00",
+    "cashOnly": false
   },
   {
     "name": "The Ale House",
@@ -60,7 +72,9 @@
     "address": "1034 Willow Ave, Hoboken, NJ 07030",
     "league": ["Monday", "Wednesday"],
     "rating": "8.3",
-    "tables": 1
+    "tables": 1,
+    "pricePerGame": "$1.00",
+    "cashOnly": true
   },
   {
     "name": "Willie McBride's",
@@ -69,7 +83,9 @@
     "address": "616 Grand St, Hoboken, NJ 07030",
     "league": ["HIVE ATHLETICS CONFLICT"],
     "rating": "4.1",
-    "tables": 1
+    "tables": 1,
+    "pricePerGame": "$1.00",
+    "cashOnly": true
   },
   {
     "name": "Madd Hatter",
@@ -78,6 +94,8 @@
     "address": "221 Washington St, Hoboken, NJ 07030",
     "league": [],
     "rating": "6.1",
-    "tables": 1
+    "tables": 1,
+    "pricePerGame": "$2.00",
+    "cashOnly": false
   }
 ]

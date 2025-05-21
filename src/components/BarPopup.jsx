@@ -12,6 +12,8 @@ const BarPopup = ({ bar }) => {
       <p><strong>League Nights:</strong> {leagueDays}</p>
       <p><strong>Table Rating:</strong> {bar.rating || 'Not rated'}</p>
       <p><strong>Number of Tables:</strong> {bar.tables}</p>
+      <p><strong>Price Per Game:</strong> {bar.pricePerGame}</p>
+      <p><strong>Cash Only:</strong> {bar.cashOnly ? 'Yes' : 'No'}</p>
     </div>
   );
 };
