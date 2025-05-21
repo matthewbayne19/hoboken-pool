@@ -43,6 +43,10 @@ const Homepage = () => {
         View Tournaments
       </button>
 
+      {/*<button onClick={() => navigate('/rules')} style={buttonStyle}>
+        View APA Rules
+      </button>*/}
+
       <a
         href={`mailto:matthewbayne19@gmail.com?subject=Suggestion/Correction - ${today}`}
             style={{
