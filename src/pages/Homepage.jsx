@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Homepage = () => {
   const navigate = useNavigate();
+  const today = new Date().toISOString().split('T')[0];
 
   const buttonStyle = {
     padding: '0.75rem 1.5rem',
@@ -14,7 +15,8 @@ const Homepage = () => {
     cursor: 'pointer',
     marginTop: '1rem',
     width: '100%',
-    maxWidth: '300px'
+    width: '300px',
+    textAlign: 'center'
   };
 
   return (
@@ -26,22 +28,30 @@ const Homepage = () => {
       alignItems: 'center'
     }}>
       <p style={{ fontSize: '1.1rem', maxWidth: '400px' }}>
-        Welcome! Use this app to find pool tables, league info, and tournaments around Hoboken.
+        Welcome! Use this app to find pool tables and league info around Hoboken.
       </p>
 
-      <button
-        onClick={() => navigate('/map')}
-        style={buttonStyle}
-      >
+      <button onClick={() => navigate('/map')} style={buttonStyle}>
         View Map
       </button>
 
-      <button
-        onClick={() => navigate('/tournaments')}
-        style={buttonStyle}
-      >
+      <button onClick={() => navigate('/tournaments')} style={buttonStyle}>
         View Tournaments
       </button>
+
+      <a
+        href={`mailto:matthewbayne19@gmail.com?subject=Suggestion/Correction - ${today}`}
+            style={{
+                ...buttonStyle,
+                display: 'block',           // Force it to behave like a block element
+                boxSizing: 'border-box',   // Match button behavior
+                textDecoration: 'none',
+                textAlign: 'center'
+            }}
+            >
+            Make Suggestion
+      </a>
+
     </div>
   );
 };
