@@ -3,7 +3,7 @@ import React from 'react';
 const tournaments = [
   {
     location: "Mulligan's Pub",
-    date: "Tuesday - 5/28/25",
+    date: "Tuesday - 5/28/25 *Unconfirmed*",
     time: "9:00 PM",
     description: "Single elimination, cash prize for winner. Signup starts at 8:30 PM. $5 buy-in, winner takes all."
   }
