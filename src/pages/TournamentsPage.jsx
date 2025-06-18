@@ -3,9 +3,9 @@ import React from 'react';
 const tournaments = [
   {
     location: "Mulligan's Pub",
-    date: "Tuesday - 6/3/25 *Unconfirmed*",
+    date: "Every Tuesday",
     time: "9:00 PM",
-    description: "Single elimination. Signup starts at 8:30 PM."
+    description: "Single elimination. Random matchups. Signup starts at 8:30 PM."
   }
 ];
 
