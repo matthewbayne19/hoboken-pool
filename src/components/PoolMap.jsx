@@ -5,6 +5,7 @@ import ReactDOMServer from 'react-dom/server';
 import { useNavigate } from 'react-router-dom';
 import BarPopup from './BarPopup';
 import LegendOverlay from './LegendOverlay';
+import styles from './PoolMap.module.css';
 
 const HOBOKEN_CENTER = { lat: 40.744, lng: -74.032 };
 const MAP_STYLE = 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json';
@@ -50,6 +51,9 @@ const PoolMap = ({ poolBars }) => {
       setLoading(false);
     });
 
+    // Store marker references by bar name
+    const markerMap = {};
+
     poolBars.forEach((bar) => {
       const color = getMarkerColor(bar, today);
       // Create marker element
@@ -75,11 +79,24 @@ const PoolMap = ({ poolBars }) => {
       const popup = new maplibregl.Popup({ offset: 25, maxWidth: '260px' }).setDOMContent(popupNode);
 
       // Create marker and attach popup
-      new maplibregl.Marker({ element: el })
+      const marker = new maplibregl.Marker({ element: el })
         .setLngLat([bar.lng, bar.lat])
         .setPopup(popup)
         .addTo(map);
+
+      markerMap[bar.name] = marker;
     });
+
+    // Auto-open popup if hash is present
+    const hash = decodeURIComponent(window.location.hash.replace('#', ''));
+    if (hash && markerMap[hash]) {
+      // Center map on marker and open popup
+      const bar = poolBars.find(b => b.name === hash);
+      if (bar) {
+        map.flyTo({ center: [bar.lng, bar.lat], zoom: 16, essential: true });
+      }
+      markerMap[hash].togglePopup();
+    }
 
     return () => {
       if (mapRef.current) {
@@ -93,7 +110,7 @@ const PoolMap = ({ poolBars }) => {
   return (
     <div style={{ position: 'relative', height: '100vh', width: '100vw' }}>
       <button
-        className="map-back-btn"
+        className={styles['map-back-btn']}
         onClick={() => navigate('/')}
         aria-label="Back to home"
         style={{ position: 'absolute', top: 18, left: 18, zIndex: 2100 }}
@@ -104,8 +121,8 @@ const PoolMap = ({ poolBars }) => {
         </svg>
       </button>
       {loading && (
-        <div className="map-loading-overlay">
-          <div className="map-spinner" />
+        <div className={styles['map-loading-overlay']}>
+          <div className={styles['map-spinner']} />
         </div>
       )}
       <LegendOverlay />

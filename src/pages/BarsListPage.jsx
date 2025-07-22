@@ -1,36 +1,80 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import MapIcon from '@mui/icons-material/Map';
+import styles from '../components/PoolMap.module.css';
 
 const BarsListPage = () => {
   const [bars, setBars] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
+    setLoading(true);
     fetch(process.env.PUBLIC_URL + '/data/poolbars.json')
       .then(res => res.json())
-      .then(data => setBars(data))
-      .catch(err => console.error('Error loading bar data:', err));
+      .then(data => {
+        setBars(data);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error('Error loading bar data:', err);
+        setLoading(false);
+      });
   }, []);
 
+  const handleViewOnMap = (bar) => {
+    navigate(`/map#${encodeURIComponent(bar.name)}`);
+  };
+
   return (
-    <div style={{ padding: '2rem' }}>
-      <h2>Pool Bar List</h2>
-      {bars.map((bar, i) => (
-        <div key={i} style={{
-          marginBottom: '1.5rem',
-          padding: '1rem',
-          border: '1px solid #ccc',
-          borderRadius: '8px',
-          boxShadow: '0 2px 4px rgba(0,0,0,0.05)'
-        }}>
-          <h3>{bar.name}</h3>
-          <p><strong>Address:</strong> {bar.address}</p>
-          <p><strong>League Nights:</strong> {bar.league.length > 0 ? bar.league.join(', ') : 'None'}</p>
-          <p><strong>Rating:</strong> {bar.rating}</p>
-          <p><strong>Tables:</strong> {bar.tables}</p>
-          <p><strong>Price Per Game:</strong> {bar.pricePerGame}</p>
-          <p><strong>Cash Only:</strong> {bar.cashOnly ? 'Yes' : 'No'}</p>
+    <main className="barlist-root">
+      <button
+        className={styles['map-back-btn']}
+        onClick={() => navigate('/')}
+        aria-label="Back to home"
+        style={{ position: 'absolute', top: 18, left: 18, zIndex: 2100 }}
+      >
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="16" cy="16" r="16" fill="#fff" fillOpacity="0.92" />
+          <path d="M19.5 10L13.5 16L19.5 22" stroke="#184d27" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </button>
+      {loading && (
+        <div className="map-loading-overlay">
+          <div className="map-spinner" />
         </div>
-      ))}
-    </div>
+      )}
+      <h2 className="barlist-title">Pool Bar List</h2>
+      <div className="barlist-list">
+        {bars.map((bar, i) => (
+          <div key={i} className="barlist-card">
+            <div className="bar-popup-title">{bar.name}</div>
+            <div className="bar-popup-divider" />
+            <div className="bar-popup-section">
+              <strong>Address:</strong><br />{bar.address}
+            </div>
+            <div className="bar-popup-section">
+              <strong>League Nights:</strong> {Array.isArray(bar.league) && bar.league.length > 0 ? bar.league.join(', ') : 'None'}
+            </div>
+            <div className="bar-popup-section">
+              <strong>Table Rating:</strong> {bar.rating || 'Not rated'}<br />
+              <strong>Tables:</strong> {bar.tables}<br />
+              <strong>Price/Game:</strong> {bar.pricePerGame}<br />
+              <strong>Cash Only:</strong> {bar.cashOnly ? 'Yes' : 'No'}
+            </div>
+            <button
+              className="barlist-viewmap-btn"
+              onClick={() => handleViewOnMap(bar)}
+              aria-label={`View ${bar.name} on map`}
+              style={{ color: '#e6c97a', background: 'none', border: 'none', fontWeight: 700, fontSize: '1.01rem', display: 'flex', alignItems: 'center', gap: '0.4em', position: 'absolute', right: 18, bottom: 16, zIndex: 2, boxShadow: 'none', padding: 0 }}
+            >
+              <MapIcon style={{ fontSize: 20, color: '#e6c97a', marginBottom: '-2px' }} />
+              View on Map
+            </button>
+          </div>
+        ))}
+      </div>
+    </main>
   );
 };
 
