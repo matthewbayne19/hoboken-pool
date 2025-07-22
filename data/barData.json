@@ -1,0 +1,173 @@
+[
+  {
+    "name": "Mulligan's Pub",
+    "lat": 40.73776,
+    "lng": -74.03229,
+    "address": "159 1st St, Hoboken, NJ 07030",
+    "games": {
+      "pool": {
+        "tables": 1,
+        "league": ["Monday", "Wednesday"],
+        "rating": "8.5",
+        "pricePerGame": "$1.00"
+      },
+      "darts": true,
+      "shuffleboard": false,
+      "arcade": false,
+      "photobooth": false
+    },
+    "cashOnly": true
+  },
+  {
+    "name": "McSwiggan's Pub",
+    "lat": 40.73781,
+    "lng": -74.03160,
+    "address": "110 1st St, Hoboken, NJ 07030",
+    "games": {
+      "pool": {
+        "tables": 1,
+        "league": [],
+        "rating": "8.7",
+        "pricePerGame": "$1.00"
+      },
+      "darts": true,
+      "shuffleboard": false,
+      "arcade": false,
+      "photobooth": false
+    },
+    "cashOnly": true
+  },
+  {
+    "name": "The Shannon",
+    "lat": 40.73768,
+    "lng": -74.03137,
+    "address": "106 1st St, Hoboken, NJ 07030",
+    "games": {
+      "pool": {
+        "tables": 2,
+        "league": ["Monday", "Wednesday"],
+        "rating": "9.1",
+        "pricePerGame": "$2.00"
+      },
+      "darts": true,
+      "shuffleboard": false,
+      "arcade": false,
+      "photobooth": false
+    },
+    "cashOnly": true
+  },
+  {
+    "name": "The Ferryman on 1st",
+    "lat": 40.73753,
+    "lng": -74.03193,
+    "address": "94 Bloomfield St, Hoboken, NJ 07030",
+    "games": {
+      "pool": {
+        "tables": 1,
+        "league": ["Monday", "Wednesday"],
+        "rating": "6.9",
+        "pricePerGame": "$2.00"
+      },
+      "darts": true,
+      "shuffleboard": false,
+      "arcade": false,
+      "photobooth": false
+    },
+    "cashOnly": false
+  },
+  {
+    "name": "River Street Garage",
+    "lat": 40.73632,
+    "lng": -74.02931,
+    "address": "80 River St, Hoboken, NJ 07030",
+    "games": {
+      "pool": {
+        "tables": 1,
+        "league": [],
+        "rating": "7.3",
+        "pricePerGame": "$2.00"
+      },
+      "darts": true,
+      "shuffleboard": false,
+      "arcade": false,
+      "photobooth": false
+    },
+    "cashOnly": true
+  },
+  {
+    "name": "Louise & Jerry's Tavern",
+    "lat": 40.74106,
+    "lng": -74.02964,
+    "address": "329 Washington St, Hoboken, NJ 07030",
+    "games": {
+      "pool": {
+        "tables": 1,
+        "league": ["Sunday"],
+        "rating": "7.9",
+        "pricePerGame": "$2.00"
+      },
+      "darts": false,
+      "shuffleboard": false,
+      "arcade": false,
+      "photobooth": false
+    },
+    "cashOnly": false
+  },
+  {
+    "name": "The Ale House",
+    "lat": 40.75030,
+    "lng": -74.0321,
+    "address": "1034 Willow Ave, Hoboken, NJ 07030",
+    "games": {
+      "pool": {
+        "tables": 1,
+        "league": ["Monday", "Wednesday"],
+        "rating": "8.2",
+        "pricePerGame": "$1.00"
+      },
+      "darts": true,
+      "shuffleboard": false,
+      "arcade": false,
+      "photobooth": false
+    },
+    "cashOnly": true
+  },
+  {
+    "name": "Willie McBride's",
+    "lat": 40.74521,
+    "lng": -74.03441,
+    "address": "616 Grand St, Hoboken, NJ 07030",
+    "games": {
+      "pool": {
+        "tables": 1,
+        "league": ["HIVE ATHLETICS CONFLICT"],
+        "rating": "4.1",
+        "pricePerGame": "$1.00"
+      },
+      "darts": true,
+      "shuffleboard": false,
+      "arcade": false,
+      "photobooth": false
+    },
+    "cashOnly": true
+  },
+  {
+    "name": "Madd Hatter",
+    "lat": 40.73949,
+    "lng": -74.03010,
+    "address": "221 Washington St, Hoboken, NJ 07030",
+    "games": {
+      "pool": {
+        "tables": 1,
+        "league": [],
+        "rating": "6.1",
+        "pricePerGame": "$2.00"
+      },
+      "darts": true,
+      "shuffleboard": false,
+      "arcade": false,
+      "photobooth": false
+    },
+    "cashOnly": false
+  }
+] 
