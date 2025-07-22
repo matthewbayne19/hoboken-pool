@@ -26,7 +26,7 @@ const TournamentsPage = () => {
           <path d="M19.5 10L13.5 16L19.5 22" stroke="#184d27" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </button>
-      <h2 className="barlist-title" style={{ fontSize: '1.5rem', fontWeight: 800, color: '#184d27', letterSpacing: '1.1px', marginBottom: '1.2rem', textAlign: 'center' }}>Upcoming Tournaments</h2>
+      <h2 className="barlist-title">Upcoming Tournaments</h2>
       <div className="barlist-list" style={{ width: '100%', maxWidth: 420, display: 'flex', flexDirection: 'column', gap: '1.3rem', alignItems: 'center' }}>
         {tournaments.map((t, i) => (
           <div key={i} className="barlist-card" style={{ background: '#fff', borderRadius: 18, boxShadow: '0 4px 24px #0001', padding: '1.3em 1.4em 1.1em 1.4em', width: '100%', maxWidth: 370, border: '1.5px solid #f3e7b3', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', position: 'relative', minHeight: 180 }}>

@@ -66,7 +66,6 @@ const BarsListPage = () => {
               className="barlist-viewmap-btn"
               onClick={() => handleViewOnMap(bar)}
               aria-label={`View ${bar.name} on map`}
-              style={{ color: '#e6c97a', background: 'none', border: 'none', fontWeight: 700, fontSize: '1.01rem', display: 'flex', alignItems: 'center', gap: '0.4em', position: 'absolute', right: 18, bottom: 16, zIndex: 2, boxShadow: 'none', padding: 0 }}
             >
               <MapIcon style={{ fontSize: 20, color: '#e6c97a', marginBottom: '-2px' }} />
               View on Map
