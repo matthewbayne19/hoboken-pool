@@ -1,6 +1,5 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { MdMap, MdLocalBar, MdEmojiEvents, MdLightbulbOutline } from 'react-icons/md';
 import './Homepage.css';
 
 const Homepage = () => {
@@ -12,35 +11,27 @@ const Homepage = () => {
   };
 
   return (
-    <main className="homepage-root">
-      <div className="homepage-animated-bg" />
-      <div className="homepage-title-outer">
-        <h1 className="homepage-main-title">Hoboken Pool Tables</h1>
-      </div>
-      <div className="homepage-content">
-        <div className="homepage-buttons">
-          <button className="homepage-btn" onClick={() => navigate('/map')}>
-            <span className="homepage-btn-icon"><MdMap size={22} /></span>
+    <main className="homepage-sleek-root">
+      <div className="homepage-sleek-content">
+        <h1 className="homepage-sleek-title">Hoboken Pool Tables</h1>
+        <p className="homepage-sleek-subtitle">
+          Discover every pool table, tournament, and league night in Hoboken.
+        </p>
+        <nav className="homepage-sleek-buttons">
+          <button className="homepage-sleek-btn" onClick={() => navigate('/map')}>
             View Map
           </button>
-          <button className="homepage-btn" onClick={() => navigate('/bars')}>
-            <span className="homepage-btn-icon"><MdLocalBar size={22} /></span>
-            View Bar List
+          <button className="homepage-sleek-btn" onClick={() => navigate('/bars')}>
+            Bar List
           </button>
-          <button className="homepage-btn" onClick={() => navigate('/tournaments')}>
-            <span className="homepage-btn-icon"><MdEmojiEvents size={22} /></span>
-            View Tournaments
+          <button className="homepage-sleek-btn" onClick={() => navigate('/tournaments')}>
+            Tournaments
           </button>
-          {/* <button className="homepage-btn" onClick={() => navigate('/rules')}>
-            View APA Rules
-          </button> */}
-          <button className="homepage-btn" onClick={handleSuggestionClick}>
-            <span className="homepage-btn-icon"><MdLightbulbOutline size={22} /></span>
-            Make Suggestion
-          </button>
-        </div>
+        </nav>
+        <button className="homepage-sleek-link-btn" onClick={handleSuggestionClick}>
+          Make a Suggestion
+        </button>
       </div>
-      <div className="homepage-fade" />
     </main>
   );
 };

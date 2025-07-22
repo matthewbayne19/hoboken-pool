@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import ReactDOMServer from 'react-dom/server';
+import { useNavigate } from 'react-router-dom';
 import BarPopup from './BarPopup';
 import LegendOverlay from './LegendOverlay';
 
@@ -11,7 +12,7 @@ const MAP_STYLE = 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json
 const markerColors = {
   leagueTonight: '#e53935', // red
   noLeagueTonight: '#43a047', // green
-  noLeagueEver: '#1e88e5', // blue
+  noLeagueEver: '#222', // black
 };
 
 function getMarkerColor(bar, today) {
@@ -27,6 +28,7 @@ const PoolMap = ({ poolBars }) => {
   const mapRef = useRef(null);
   const [loading, setLoading] = useState(true);
   const today = new Date().toLocaleString('en-US', { weekday: 'long' });
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!mapContainer.current) return;
@@ -90,6 +92,17 @@ const PoolMap = ({ poolBars }) => {
 
   return (
     <div style={{ position: 'relative', height: '100vh', width: '100vw' }}>
+      <button
+        className="map-back-btn"
+        onClick={() => navigate('/')}
+        aria-label="Back to home"
+        style={{ position: 'absolute', top: 18, left: 18, zIndex: 2100 }}
+      >
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="16" cy="16" r="16" fill="#fff" fillOpacity="0.92" />
+          <path d="M19.5 10L13.5 16L19.5 22" stroke="#184d27" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </button>
       {loading && (
         <div className="map-loading-overlay">
           <div className="map-spinner" />

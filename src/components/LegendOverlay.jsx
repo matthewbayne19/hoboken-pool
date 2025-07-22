@@ -3,7 +3,7 @@ import React from 'react';
 const legendItems = [
   { color: '#e53935', label: 'League Tonight' },
   { color: '#43a047', label: 'No League Tonight' },
-  { color: '#1e88e5', label: 'No League Ever' },
+  { color: '#222', label: 'No League Ever' }, // black
 ];
 
 const LegendOverlay = () => {
