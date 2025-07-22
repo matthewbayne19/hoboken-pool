@@ -1,22 +1,50 @@
 import React from 'react';
 
+const legendItems = [
+  { color: '#e53935', label: 'League Tonight' },
+  { color: '#43a047', label: 'No League Tonight' },
+  { color: '#1e88e5', label: 'No League Ever' },
+];
+
 const LegendOverlay = () => {
   return (
-    <div style={{
-      position: 'absolute',
-      top: 10,
-      right: 10,
-      backgroundColor: 'white',
-      padding: '10px',
-      borderRadius: '8px',
-      boxShadow: '0 2px 6px rgba(0,0,0,0.2)',
-      zIndex: 1000,
-      fontSize: '14px',
-      textAlign: 'left'
-    }}>
-      <div><span style={{ color: 'red', fontWeight: 'bold' }}>●</span> League Tonight</div>
-      <div><span style={{ color: 'green', fontWeight: 'bold' }}>●</span> No League Tonight</div>
-      <div><span style={{ color: 'blue', fontWeight: 'bold' }}>●</span> No League Ever</div>
+    <div
+      style={{
+        position: 'absolute',
+        top: 18,
+        right: 18,
+        padding: 0,
+        borderRadius: 0,
+        boxShadow: 'none',
+        zIndex: 1000,
+        fontSize: '1rem',
+        fontFamily: 'Montserrat, Arial, sans-serif',
+        color: '#111',
+        minWidth: 0,
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '10px',
+        alignItems: 'flex-start', // left align
+        maxWidth: '90vw',
+        userSelect: 'none',
+      }}
+    >
+      {legendItems.map((item, i) => (
+        <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.7em', background: 'none', padding: 0 }}>
+          <span
+            style={{
+              display: 'inline-block',
+              width: 18,
+              height: 18,
+              borderRadius: '50%',
+              background: item.color,
+              boxShadow: '0 1px 4px #0003',
+              border: '2px solid #fff',
+            }}
+          />
+          <span style={{ fontSize: '0.98em', fontWeight: 600, color: '#111', textShadow: '0 1px 4px #fff8' }}>{item.label}</span>
+        </div>
+      ))}
     </div>
   );
 };

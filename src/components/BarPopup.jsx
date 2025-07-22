@@ -6,14 +6,21 @@ const BarPopup = ({ bar }) => {
     : 'None';
 
   return (
-    <div style={{ textAlign: 'center' }}>
-      <h3>{bar.name}</h3>
-      <p><strong>Address:</strong><br />{bar.address}</p>
-      <p><strong>League Nights:</strong> {leagueDays}</p>
-      <p><strong>Table Rating:</strong> {bar.rating || 'Not rated'}</p>
-      <p><strong>Number of Tables:</strong> {bar.tables}</p>
-      <p><strong>Price Per Game:</strong> {bar.pricePerGame}</p>
-      <p><strong>Cash Only:</strong> {bar.cashOnly ? 'Yes' : 'No'}</p>
+    <div className="bar-popup-root">
+      <div className="bar-popup-title">{bar.name}</div>
+      <div className="bar-popup-divider" />
+      <div className="bar-popup-section">
+        <strong>Address:</strong><br />{bar.address}
+      </div>
+      <div className="bar-popup-section">
+        <strong>League Nights:</strong> {leagueDays}
+      </div>
+      <div className="bar-popup-section">
+        <strong>Table Rating:</strong> {bar.rating || 'Not rated'}<br />
+        <strong>Tables:</strong> {bar.tables}<br />
+        <strong>Price/Game:</strong> {bar.pricePerGame}<br />
+        <strong>Cash Only:</strong> {bar.cashOnly ? 'Yes' : 'No'}
+      </div>
     </div>
   );
 };

@@ -1,66 +1,47 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { MdMap, MdLocalBar, MdEmojiEvents, MdLightbulbOutline } from 'react-icons/md';
+import './Homepage.css';
 
 const Homepage = () => {
   const navigate = useNavigate();
   const today = new Date().toISOString().split('T')[0];
 
-  const buttonStyle = {
-    padding: '0.75rem 1.5rem',
-    fontSize: '1.2rem',
-    borderRadius: '8px',
-    backgroundColor: '#222',
-    color: '#fff',
-    border: 'none',
-    cursor: 'pointer',
-    marginTop: '1rem',
-    width: '100%',
-    maxWidth: '300px',
-    textAlign: 'center'
+  const handleSuggestionClick = () => {
+    window.location.href = `mailto:matthewbayne19@gmail.com?subject=Suggestion/Correction - ${today}`;
   };
 
   return (
-    <div style={{
-      textAlign: 'center',
-      padding: '2rem',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center'
-    }}>
-      <p style={{ fontSize: '1.1rem', maxWidth: '400px' }}>
-        Welcome! Use this app to find pool tables and league info around Hoboken.
-      </p>
-
-      <button onClick={() => navigate('/map')} style={buttonStyle}>
-        View Map
-      </button>
-
-      <button onClick={() => navigate('/bars')} style={buttonStyle}>
-        View Bar List
-      </button>
-
-      <button onClick={() => navigate('/tournaments')} style={buttonStyle}>
-        View Tournaments
-      </button>
-
-      {/*<button onClick={() => navigate('/rules')} style={buttonStyle}>
-        View APA Rules
-      </button>*/}
-
-      <a
-        href={`mailto:matthewbayne19@gmail.com?subject=Suggestion/Correction - ${today}`}
-            style={{
-                ...buttonStyle,
-                display: 'block',           // Force it to behave like a block element
-                boxSizing: 'border-box',   // Match button behavior
-                textDecoration: 'none',
-                textAlign: 'center'
-            }}
-            >
+    <main className="homepage-root">
+      <div className="homepage-animated-bg" />
+      <div className="homepage-title-outer">
+        <h1 className="homepage-main-title">Hoboken Pool Tables</h1>
+      </div>
+      <div className="homepage-content">
+        <div className="homepage-buttons">
+          <button className="homepage-btn" onClick={() => navigate('/map')}>
+            <span className="homepage-btn-icon"><MdMap size={22} /></span>
+            View Map
+          </button>
+          <button className="homepage-btn" onClick={() => navigate('/bars')}>
+            <span className="homepage-btn-icon"><MdLocalBar size={22} /></span>
+            View Bar List
+          </button>
+          <button className="homepage-btn" onClick={() => navigate('/tournaments')}>
+            <span className="homepage-btn-icon"><MdEmojiEvents size={22} /></span>
+            View Tournaments
+          </button>
+          {/* <button className="homepage-btn" onClick={() => navigate('/rules')}>
+            View APA Rules
+          </button> */}
+          <button className="homepage-btn" onClick={handleSuggestionClick}>
+            <span className="homepage-btn-icon"><MdLightbulbOutline size={22} /></span>
             Make Suggestion
-      </a>
-
-    </div>
+          </button>
+        </div>
+      </div>
+      <div className="homepage-fade" />
+    </main>
   );
 };
 
