@@ -18,7 +18,8 @@
         "photobooth": false
       },
       "dj": false,
-      "liveMusic": false
+      "liveMusic": false,
+      "touchtunes": false
     },
     {
       "name": "McSwiggan's Pub",
@@ -39,7 +40,8 @@
         "photobooth": false
       },
       "dj": true,
-      "liveMusic": false
+      "liveMusic": false,
+      "touchtunes": false
     },
     {
       "name": "The Shannon",
@@ -60,7 +62,8 @@
         "photobooth": false
       },
       "dj": true,
-      "liveMusic": false
+      "liveMusic": false,
+      "touchtunes": false
     },
     {
       "name": "The Ferryman on 1st",
@@ -81,7 +84,8 @@
         "photobooth": false
       },
       "dj": true,
-      "liveMusic": false
+      "liveMusic": false,
+      "touchtunes": false
     },
     {
       "name": "River Street Garage",
@@ -102,7 +106,8 @@
         "photobooth": false
       },
       "dj": true,
-      "liveMusic": true
+      "liveMusic": true,
+      "touchtunes": false
     },
     {
       "name": "Louise & Jerry's Tavern",
@@ -123,7 +128,8 @@
         "photobooth": false
       },
       "dj": false,
-      "liveMusic": false
+      "liveMusic": false,
+      "touchtunes": false
     },
     {
       "name": "The Ale House",
@@ -144,7 +150,8 @@
         "photobooth": false
       },
       "dj": false,
-      "liveMusic": false
+      "liveMusic": false,
+      "touchtunes": false
     },
     {
       "name": "Willie McBride's",
@@ -165,7 +172,8 @@
         "photobooth": true
       },
       "dj": false,
-      "liveMusic": true
+      "liveMusic": true,
+      "touchtunes": false
     },
     {
       "name": "Madd Hatter",
@@ -186,7 +194,8 @@
         "photobooth": true
       },
       "dj": true,
-      "liveMusic": false
+      "liveMusic": false,
+      "touchtunes": false
     }
   ]
   
