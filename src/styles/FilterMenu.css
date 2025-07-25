@@ -1,0 +1,134 @@
+.filter-menu-root {
+  position: absolute;
+  top: 30px;
+  right: 25px;
+  z-index: 2102;
+}
+
+.filter-menu-btn {
+  background: none;
+  color: #fff;
+  font-family: 'Oswald', Arial, sans-serif;
+  font-weight: 700;
+  border: none;
+  border-radius: 999px;
+  padding: 0;
+  font-size: 1.1em;
+  cursor: pointer;
+  box-shadow: none;
+  transition: background 0.15s, color 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-menu-btn:hover, .filter-menu-btn:focus {
+  background: none;
+  color: #1ed760;
+}
+
+.filter-menu-btn svg {
+  display: block;
+}
+
+.filter-menu-dropdown {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background: #181a20;
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px #0008, 0 0 12px #1ed76055;
+  padding: 2.2em 1.2em 1em 1.2em;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  z-index: 2103;
+}
+
+.filter-menu-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  font-size: 1em;
+  font-family: 'Oswald', Arial, sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.filter-menu-checkbox input[type='checkbox'] {
+  accent-color: #1ed760;
+  width: 1.1em;
+  height: 1.1em;
+}
+
+.filter-menu-update-btn, .filter-menu-reset-btn {
+  height: 3em;
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+  border-radius: 999px;
+  font-family: 'Oswald', Arial, sans-serif;
+  font-weight: 700;
+  box-shadow: none;
+  transition: color 0.15s, background 0.15s;
+}
+
+.filter-menu-update-btn {
+  margin-top: 1em;
+  background: #1ed760;
+  color: #181a20;
+  border: none;
+  padding: 0.2em 1em;
+  cursor: pointer;
+  width: 100%;
+  display: block;
+}
+
+.filter-menu-update-btn:hover, .filter-menu-update-btn:focus {
+  background: #23e36a;
+  color: #000;
+}
+
+.filter-menu-reset-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.2em 1em;
+  margin-top: 0.9em;
+}
+
+.filter-menu-reset-btn:hover, .filter-menu-reset-btn:focus {
+  color: #1ed760;
+}
+
+.filter-menu-close-btn {
+  position: absolute;
+  top: .7em;
+  right: .7em;
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 0;
+  cursor: pointer;
+  z-index: 1;
+  font-size: 1.2em;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-menu-close-btn svg {
+  display: block;
+}
+
+.filter-menu-actions {
+  display: flex;
+  gap: 0.7em;
+  margin-top: 1em;
+  width: 100%;
+  justify-content: flex-end;
+} 

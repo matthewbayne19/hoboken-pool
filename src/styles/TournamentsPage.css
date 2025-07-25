@@ -1,0 +1,117 @@
+.root {
+  min-height: 100vh;
+  width: 100vw;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.2rem 0 2.2rem 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  position: relative;
+}
+.backBtn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px #1ed76033;
+  cursor: pointer;
+  transition: box-shadow 0.15s, background 0.15s;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  z-index: 2100;
+  color: #1ed760;
+}
+.backBtn:hover, .backBtn:focus {
+  background: #1ed76033;
+  box-shadow: 0 4px 16px #1ed76044;
+  color: #23262f;
+}
+.title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 1.1px;
+  margin-top: 3.5rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  font-family: 'Bebas Neue', 'Montserrat', Arial, sans-serif;
+  text-shadow: 0 2px 16px #1ed76022;
+}
+.list {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  align-items: center;
+}
+.card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px #0002;
+  padding: 1.3em 1.4em 1.1em 1.4em;
+  width: 100%;
+  max-width: 370px;
+  border: 1.5px solid rgba(24,77,39,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  min-height: 180px;
+  color: #181a20;
+}
+.cardTitle {
+  font-size: 1.22em;
+  font-weight: 800;
+  margin-bottom: 0.45em;
+  letter-spacing: 0.7px;
+  text-shadow: 0 2px 8px #1ed76022, 0 1px 0 #1ed76011;
+  line-height: 1.2;
+}
+.divider {
+  height: 1.5px;
+  width: 100%;
+  background: linear-gradient(90deg, #1ed760 0%, #e6c97a 100%);
+  border: none;
+  margin: 0.5em 0 0.7em 0;
+  opacity: 0.7;
+  border-radius: 1px;
+}
+.section {
+  font-size: 1.01em;
+  margin-bottom: 0.55em;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  color: #181a20;
+}
+.section:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 600px) {
+  .root {
+    padding: 1.1rem 0 1.1rem 0;
+  }
+  .title {
+    font-size: 1.1rem;
+    margin-top: 2.7rem;
+    margin-bottom: 0.7rem;
+  }
+  .list {
+    max-width: 99vw;
+    gap: 0.7rem;
+  }
+  .card {
+    padding: 1em 0.7em 2.2em 0.7em;
+    border-radius: 12px;
+    max-width: 99vw;
+    min-height: 140px;
+  }
+} 
